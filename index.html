@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aplikasi Rental Mobil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rental Mobil ABC</h1>
+    </header>
+
+    <main class="container">
+      <section class="mobil-grid">
+        <div class="card">
+          <img src="./img/avanza.png" alt="Toyota Avanza" />
+          <h3>Toyota Avanza</h3>
+          <p>Rp 500.000 / hari</p>
+          <label
+            ><input type="checkbox" class="checkbox" data-index="0" /> Pilih
+            Mobil</label
+          ><br />
+          <label
+            >Tanggal Mulai:
+            <input type="date" class="tgl" data-index="0" /></label
+          ><br />
+          <label
+            >Durasi (hari):
+            <input
+              type="number"
+              class="durasi"
+              data-index="0"
+              min="1"
+              value="1"
+          /></label>
+        </div>
+
+        <div class="card">
+          <img src="./img/innova.png" alt="Kijang Innova" />
+          <h3>Kijang Innova</h3>
+          <p>Rp 700.000 / hari</p>
+          <label
+            ><input type="checkbox" class="checkbox" data-index="1" /> Pilih
+            Mobil</label
+          ><br />
+          <label
+            >Tanggal Mulai:
+            <input type="date" class="tgl" data-index="1" /></label
+          ><br />
+          <label
+            >Durasi (hari):
+            <input
+              type="number"
+              class="durasi"
+              data-index="1"
+              min="1"
+              value="1"
+          /></label>
+        </div>
+
+        <div class="card">
+          <img src="./img/hrv.png" alt="Honda HRV" />
+          <h3>Honda HRV</h3>
+          <p>Rp 600.000 / hari</p>
+          <label
+            ><input type="checkbox" class="checkbox" data-index="2" /> Pilih
+            Mobil</label
+          ><br />
+          <label
+            >Tanggal Mulai:
+            <input type="date" class="tgl" data-index="2" /></label
+          ><br />
+          <label
+            >Durasi (hari):
+            <input
+              type="number"
+              class="durasi"
+              data-index="2"
+              min="1"
+              value="1"
+          /></label>
+        </div>
+
+        <div class="card">
+          <img src="./img/sigra.png" alt="Daihatsu Sigra" />
+          <h3>Daihatsu Sigra</h3>
+          <p>Rp 450.000 / hari</p>
+          <label
+            ><input type="checkbox" class="checkbox" data-index="3" /> Pilih
+            Mobil</label
+          ><br />
+          <label
+            >Tanggal Mulai:
+            <input type="date" class="tgl" data-index="3" /></label
+          ><br />
+          <label
+            >Durasi (hari):
+            <input
+              type="number"
+              class="durasi"
+              data-index="3"
+              min="1"
+              value="1"
+          /></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Data Pelanggan</h2>
+        <input
+          type="text"
+          id="namaPelanggan"
+          placeholder="Nama Lengkap"
+          required
+        />
+        <div class="form-actions">
+          <button type="button" onclick="hitungTotal()">Hitung Total</button>
+          <button type="button" onclick="simpanPemesanan()">
+            Simpan Pemesanan
+          </button>
+        </div>
+      </section>
+
+      <section class="ringkasan">
+        <h2>Ringkasan Sewa</h2>
+        <ul id="ringkasanSewa"></ul>
+        <p id="totalHarga">Total: Rp 0</p>
+      </section>
+
+      <section class="riwayat">
+        <h2>Riwayat Pemesanan</h2>
+        <ul id="daftarPemesanan"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
